@@ -15,11 +15,11 @@ public class HouseBuilder
     private List<Elevator> elevators;
     private Parking parking;
 
-    public HouseBuilder(final int floors, final RoofType roof)
+    public HouseBuilder(int floors, RoofType roof)
     {
         this.floors = floors;
         this.roof = roof;
-        this.elevators = new ArrayList<Elevator>();
+        this.elevators = new ArrayList<>();
     }
 
     public HouseBuilder withElevator()
@@ -28,13 +28,13 @@ public class HouseBuilder
         return this;
     }
 
-    public HouseBuilder withElevator(final int capacity)
+    public HouseBuilder withElevator(int capacity)
     {
         elevators.add(new Elevator(capacity));
         return this;
     }
 
-    public HouseBuilder withParking(final int capacity)
+    public HouseBuilder withParking(int capacity)
     {
         parking = new Parking(capacity);
         return this;
@@ -42,7 +42,7 @@ public class HouseBuilder
 
     public House build()
     {
-        final House house = new House(floors, roof);
+        House house = new House(floors, roof);
         house.setElevators(elevators);
         house.setParking(parking);
         return house;

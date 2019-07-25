@@ -1,7 +1,7 @@
 package com.epam.pattern.decorator.weapon;
 
-public interface Weapon
-{
+public interface Weapon {
+
     void construct();
 
     String getDescription();

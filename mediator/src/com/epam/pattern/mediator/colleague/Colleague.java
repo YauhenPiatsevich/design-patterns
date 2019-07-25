@@ -1,6 +1,6 @@
 package com.epam.pattern.mediator.colleague;
 
-public interface Colleague
-{
+public interface Colleague {
+
     void notify(String message);
 }

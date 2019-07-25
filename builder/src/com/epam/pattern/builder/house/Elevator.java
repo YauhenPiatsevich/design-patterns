@@ -11,7 +11,7 @@ public class Elevator
         this.capacity = DEFAULT_CAPACITY;
     }
 
-    public Elevator(final int capacity)
+    public Elevator(int capacity)
     {
         this.capacity = capacity;
     }

@@ -3,14 +3,13 @@ package com.epam.pattern.observer;
 import com.epam.pattern.observer.observable.WeatherStation;
 import com.epam.pattern.observer.observer.CurrentWeatherDisplay;
 
-public class ObserverExample
-{
-    public static void main(String[] args)
-    {
-        final WeatherStation weatherStation = new WeatherStation();
+public class ObserverExample {
 
-        final CurrentWeatherDisplay tv = new CurrentWeatherDisplay("TV");
-        final CurrentWeatherDisplay web = new CurrentWeatherDisplay("WEB");
+    public static void main(String[] args) {
+        WeatherStation weatherStation = new WeatherStation();
+
+        CurrentWeatherDisplay tv = new CurrentWeatherDisplay("TV");
+        CurrentWeatherDisplay web = new CurrentWeatherDisplay("WEB");
 
         weatherStation.registerObserver(tv);
         weatherStation.registerObserver(web);

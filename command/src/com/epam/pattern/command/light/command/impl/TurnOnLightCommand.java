@@ -1,20 +1,18 @@
-package com.epam.pattern.decorator.command.light.command.impl;
+package com.epam.pattern.command.light.command.impl;
 
-import com.epam.pattern.decorator.command.light.WirelessLight;
-import com.epam.pattern.decorator.command.light.command.Command;
+import com.epam.pattern.command.light.WirelessLight;
+import com.epam.pattern.command.light.command.Command;
 
-public class TurnOnLightCommand implements Command
-{
+public class TurnOnLightCommand implements Command {
+
     private final WirelessLight light;
 
-    public TurnOnLightCommand(final WirelessLight light)
-    {
+    public TurnOnLightCommand(WirelessLight light) {
         this.light = light;
     }
 
     @Override
-    public void execute()
-    {
+    public void execute() {
         light.turnOn();
     }
 }

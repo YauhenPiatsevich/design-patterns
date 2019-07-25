@@ -1,33 +1,28 @@
 package com.epam.pattern.prototype.cookie;
 
-public class ChocolateCookie extends Cookie
-{
+public class ChocolateCookie extends Cookie {
+
     private String chocolate;
 
-    public ChocolateCookie()
-    {
+    public ChocolateCookie() {
         super();
     }
 
-    public ChocolateCookie(final ChocolateCookie cookie)
-    {
+    public ChocolateCookie(ChocolateCookie cookie) {
         super(cookie);
         this.chocolate = cookie.getChocolate();
     }
 
-    public String getChocolate()
-    {
+    public String getChocolate() {
         return chocolate;
     }
 
-    public void setChocolate(final String chocolate)
-    {
+    public void setChocolate(String chocolate) {
         this.chocolate = chocolate;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return super.toString() + ", Chocolate type is: " + chocolate;
     }
 }

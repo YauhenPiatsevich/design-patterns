@@ -1,6 +1,6 @@
 package com.epam.pattern.adapter.dog;
 
-public interface Dog
-{
+public interface Dog {
+
     void bark();
 }

@@ -8,17 +8,14 @@ import com.epam.pattern.flyweight.document.impl.DocumentC;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FlyweightDocFactory
-{
-    private Map<Integer, Document> cache = new HashMap<Integer, Document>();
+public class FlyweightDocFactory {
 
-    public Document getDocument(final Integer number)
-    {
+    private Map<Integer, Document> cache = new HashMap<>();
+
+    public Document getDocument(Integer number) {
         Document document = cache.get(number);
-        if (document == null)
-        {
-            switch (number)
-            {
+        if (document == null) {
+            switch (number) {
                 case 1:
                     document = new DocumentA();
                     break;

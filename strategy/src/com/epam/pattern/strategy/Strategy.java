@@ -1,6 +1,6 @@
 package com.epam.pattern.strategy;
 
-public interface Strategy
-{
+public interface Strategy {
+
     int execute(int a, int b);
 }

@@ -1,16 +1,14 @@
 package com.epam.pattern.prototype.cookie;
 
-public class CookieMachine
-{
+public class CookieMachine {
+
     private Cookie cookie;
 
-    public CookieMachine(final Cookie cookie)
-    {
+    public CookieMachine(Cookie cookie) {
         this.cookie = cookie;
     }
 
-    public Cookie makeCookie() throws CloneNotSupportedException
-    {
+    public Cookie makeCookie() throws CloneNotSupportedException {
         return (Cookie) cookie.clone();
     }
 }

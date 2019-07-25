@@ -1,6 +1,6 @@
 package com.epam.pattern.adapter.toy;
 
-public interface Toy
-{
+public interface Toy {
+
     void makeSound();
 }

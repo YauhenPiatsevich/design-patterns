@@ -1,10 +1,9 @@
 package com.epam.pattern.adapter.dog;
 
-public class Bulldog implements Dog
-{
+public class Bulldog implements Dog {
+
     @Override
-    public void bark()
-    {
+    public void bark() {
         System.out.println("Arf-arf");
     }
 }

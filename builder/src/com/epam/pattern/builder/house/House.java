@@ -9,7 +9,7 @@ public class House
     private List<Elevator> elevators;
     private Parking parking;
 
-    public House(final int floors, final RoofType roof)
+    public House(int floors, RoofType roof)
     {
         this.floors = floors;
         this.roof = roof;
@@ -20,7 +20,7 @@ public class House
         return floors;
     }
 
-    public void setFloors(final int floors)
+    public void setFloors(int floors)
     {
         this.floors = floors;
     }
@@ -30,7 +30,7 @@ public class House
         return roof;
     }
 
-    public void setRoof(final RoofType roof)
+    public void setRoof(RoofType roof)
     {
         this.roof = roof;
     }
@@ -40,7 +40,7 @@ public class House
         return elevators;
     }
 
-    public void setElevators(final List<Elevator> elevators)
+    public void setElevators(List<Elevator> elevators)
     {
         this.elevators = elevators;
     }
@@ -50,7 +50,7 @@ public class House
         return parking;
     }
 
-    public void setParking(final Parking parking)
+    public void setParking(Parking parking)
     {
         this.parking = parking;
     }
@@ -58,7 +58,7 @@ public class House
     @Override
     public String toString()
     {
-        final StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("House with ").append(floors).append(" floors and ").append(roof).append(" roof.");
 
         if (elevators == null || elevators.isEmpty())

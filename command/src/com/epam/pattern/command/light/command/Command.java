@@ -1,6 +1,6 @@
-package com.epam.pattern.decorator.command.light.command;
+package com.epam.pattern.command.light.command;
 
-public interface Command
-{
+public interface Command {
+
     void execute();
 }

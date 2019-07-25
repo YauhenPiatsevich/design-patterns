@@ -1,6 +1,6 @@
 package com.epam.pattern.facade.computer;
 
-public interface ComputerFacade
-{
+public interface ComputerFacade {
+
     void start();
 }

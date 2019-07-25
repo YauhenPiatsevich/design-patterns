@@ -4,7 +4,7 @@ public class Parking
 {
     private final int capacity;
 
-    public Parking(final int capacity)
+    public Parking(int capacity)
     {
         this.capacity = capacity;
     }

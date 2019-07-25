@@ -1,6 +1,6 @@
 package com.epam.pattern.proxy.image;
 
-public interface Image
-{
+public interface Image {
+
     void display();
 }

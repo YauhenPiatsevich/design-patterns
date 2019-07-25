@@ -7,7 +7,7 @@ public class DogToToyAdapter implements Toy
 {
     private final Dog dog;
 
-    public DogToToyAdapter(final Dog dog)
+    public DogToToyAdapter(Dog dog)
     {
         this.dog = dog;
     }
