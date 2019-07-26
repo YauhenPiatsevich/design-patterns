@@ -4,7 +4,7 @@ import com.epam.pattern.templatemethod.computer.Computer;
 
 public abstract class ComputerConstructor {
 
-    public Computer constructComputer() {
+    public final Computer constructComputer() {
         Computer computer = new Computer();
         addProcessor(computer);
         addMemory(computer);

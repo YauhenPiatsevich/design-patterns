@@ -2,7 +2,7 @@ package com.epam.pattern.singleton;
 
 public class DatabaseConnector {
 
-    private static DatabaseConnector databaseConnector;
+    private static volatile DatabaseConnector databaseConnector;
 
     private String databaseName;
 
@@ -11,10 +11,16 @@ public class DatabaseConnector {
     }
 
     public static DatabaseConnector getConnection(String databaseName) {
-        if (databaseConnector == null) {
-            databaseConnector = new DatabaseConnector(databaseName);
+        DatabaseConnector localDatabaseConnector = databaseConnector;
+        if (localDatabaseConnector == null) {
+            synchronized (DatabaseConnector.class) {
+                localDatabaseConnector = databaseConnector;
+                if (localDatabaseConnector == null) {
+                    databaseConnector = localDatabaseConnector = new DatabaseConnector(databaseName);
+                }
+            }
         }
-        return databaseConnector;
+        return localDatabaseConnector;
     }
 
     public void connect() {
